@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Portfolio.css";
 import { FaMoon } from "react-icons/fa";
-// import { FaSun } from "react-icons/fa";
+import { FaSun } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
@@ -10,11 +10,24 @@ import { HiMiniViewfinderCircle } from "react-icons/hi2";
 
 function Portfolio() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const handleSwitchTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <>
-      <div className="bg-white border-b-2 fixed top-0 left-0 right-0 z-50">
-        <header className="flex justify-between items-center px-6 py-4 md:px-8 md:py-5 text-[#2d2e32]">
+      <div className="bg-white dark:bg-black border-b-2 dark:border-gray-700 fixed top-0 left-0 right-0 z-50">
+        <header className="flex justify-between items-center px-6 py-4 md:px-8 md:py-5 dark:text-white text-[#2d2e32]">
           <div id="logo" className="text-xl font-bold">
             <a href="#">Satyam.dev</a>
           </div>
@@ -50,8 +63,11 @@ function Portfolio() {
           </nav>
           <div className="flex items-center space-x-8">
             <div id="theme">
-              <span className="text-2xl cursor-pointer">
-                <FaMoon />
+              <span
+                className="text-2xl cursor-pointer"
+                onClick={handleSwitchTheme}
+              >
+                {theme === "light" ? <FaMoon /> : <FaSun />}
               </span>
             </div>
             <div className="md:hidden">
@@ -64,7 +80,7 @@ function Portfolio() {
 
         {/* Mobile Menu with Sliding Effect and Cross Icon Inside */}
         <nav
-          className={`md:hidden fixed inset-0 bg-[#f9f9f9] transform ${
+          className={`md:hidden fixed inset-0 dark:bg-black dark:text-white bg-[#f9f9f9] transform ${
             isMenuOpen ? `translate-x-0` : `-translate-x-full`
           } transition-transform duration-300 ease-in-out z-40`}
           onClick={() => setIsMenuOpen(false)}
@@ -103,16 +119,19 @@ function Portfolio() {
       </div>
 
       {/* Home Section */}
-      <section id="home" className="py-16">
-        <div className="min-h-screen flex flex-col justify-center items-center px-4 py-6 md:px-8 bg-[#f9f9f9]">
+      <section
+        id="home"
+        className="py-16 dark:bg-black bg-[#f9f9f9] dark:border-b-2 border-gray-700"
+      >
+        <div className="min-h-screen flex flex-col justify-center items-center px-4 py-6 md:px-8">
           <div className="flex flex-col-reverse md:flex-row justify-center items-center gap-10 md:gap-20">
             {/* Text Section */}
             <div className="text-center md:text-left">
-              <h1 className="text-4xl md:text-6xl font-extrabold text-[#2d2e32]">
+              <h1 className="text-4xl md:text-6xl font-extrabold dark:text-white text-[#2d2e32]">
                 Front-End React <br /> Developer{" "}
                 <span className="wave-hand">👋</span>
               </h1>
-              <p className="text-md font-medium mt-4 max-w-md text-[#555]">
+              <p className="text-md font-medium mt-4 max-w-md dark:text-gray-400 text-[#555]">
                 Hi, I'm Satyam Mishra. A passionate Front-end React Developer
                 from India. 📍
               </p>
@@ -120,7 +139,7 @@ function Portfolio() {
                 <a
                   href="https://github.com/satyam1007"
                   target="_blank"
-                  className="text-3xl text-gray-700 hover:text-black hover:scale-110 duration-200"
+                  className="text-3xl dark:text-gray-400 text-gray-700 hover:text-black hover:scale-110 duration-200"
                 >
                   <FaGithubSquare />
                 </a>
@@ -141,7 +160,7 @@ function Portfolio() {
 
           {/* Tech Stack Section */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mt-24">
-            <p className="font-normal text-lg text-[#2d2e32] border-b-2 md:border-b-0 border-gray-500">
+            <p className="font-normal text-lg dark:text-gray-400 text-[#2d2e32] border-b-2 md:border-b-0 border-gray-500">
               Tech Stack{" "}
               <span className="md:border-r-2 border-gray-700 md:pr-4"></span>
             </p>
@@ -201,7 +220,7 @@ function Portfolio() {
       </section>
       {/* About Section */}
       <section
-        className="px-4 sm:px-8 md:px-16 lg:px-32 lg:py-[147px]"
+        className="px-4 dark:bg-black bg-white sm:px-8 md:px-16 lg:px-32 lg:pt-16 lg:pb-28 dark:border-b-2 border-gray-700"
         id="about"
       >
         <div className="relative flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
@@ -229,10 +248,10 @@ function Portfolio() {
             <h1 className="text-sm md:text-[16px] font-bold text-[#147efb]">
               ABOUT ME
             </h1>
-            <h2 className="text-xl sm:text-2xl text-[#2d2e32] font-bold tracking-wide leading-snug mt-2">
+            <h2 className="text-xl sm:text-2xl dark:text-white text-[#2d2e32] font-bold tracking-wide leading-snug mt-2">
               Front-end Developer based <br /> in India, Hisar 📍
             </h2>
-            <div className="text-[#767676]">
+            <div className="text-[#767676] dark:text-gray-400">
               <p className="mt-4 text-[14px] sm:text-[15px]">
                 Hey, my name is Stefan, and I'm a Frontend Developer. My passion
                 is to create and develop a clean UI/UX for my users.
@@ -247,12 +266,12 @@ function Portfolio() {
       </section>
       {/* Projects Section */}
       <section
-        className="px-4 sm:px-8 md:px-16 lg:px-32 lg:py-20 bg-[#f9f9f9]"
+        className="px-4 sm:px-8 md:px-16 lg:px-32 lg:py-20 bg-[#f9f9f9] dark:bg-black dark:border-b-2 border-gray-700"
         id="projects"
       >
         <div className="py-10 text-center">
           <h1 className="text-lg font-semibold text-[#147efb]">PORTFOLIO</h1>
-          <h2 className="text-xl font-bold py-2">
+          <h2 className="text-xl font-bold py-2 dark:text-white">
             Each project is a unique piece of development 🧩
           </h2>
         </div>
@@ -266,7 +285,7 @@ function Portfolio() {
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               WEATHER APP{" "}
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png"
@@ -275,20 +294,20 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               Discover weather conditions in real-time with this visually
               stunning Weather App, crafted with React.js, Vite, and Tailwind
               CSS.
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://weather-app-lac-three-29.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -296,7 +315,7 @@ function Portfolio() {
 
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               QUIZ APP
               <img
                 src="https://cdn-icons-png.flaticon.com/512/2641/2641457.png"
@@ -305,20 +324,20 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               I've built a quiz app with React props and Tailwind CSS, featuring
               a responsive design and interactive coding questions across
               multiple levels.
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://quiz-app-eight-tawny-71.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -340,7 +359,7 @@ function Portfolio() {
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               DIGITAL CLOCK{" "}
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1404/1404164.png"
@@ -349,19 +368,19 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               "I’ve built a digital clock with React and Tailwind CSS that shows
               real-time updates with a sleek, modern design."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://digital-clock-bice-three.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -369,7 +388,7 @@ function Portfolio() {
 
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               STOPWATCH
               <img
                 src="https://cdn-icons-png.flaticon.com/512/8671/8671450.png"
@@ -378,20 +397,20 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               "I've developed a stopwatch using React and Tailwind CSS,
               featuring start, stop, and reset functionalities with a clean and
               intuitive interface."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://stop-watch-rho-beryl.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -413,7 +432,7 @@ function Portfolio() {
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               VERTAUL KEYBOARD
               <img
                 src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/On_Screen_Keyboard.png"
@@ -422,20 +441,20 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               "I’ve created a virtual keyboard with React and Tailwind CSS,
               offering a fully interactive and responsive design for enhanced
               typing experiences."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://vertual-keyboard-rho.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -443,7 +462,7 @@ function Portfolio() {
 
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               GITHUB
               <img
                 src="https://repository-images.githubusercontent.com/289382429/e9c6ec80-8902-11eb-9f55-5de819da8bf5"
@@ -452,20 +471,20 @@ function Portfolio() {
                 className="inline rounded"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               "I’ve built a GitHub clone using React and Tailwind CSS, providing
               a user-friendly interface for browsing repositories, profiles, and
               commits, with real-time updates and interactive features."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://react-search-github-profile.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -487,7 +506,7 @@ function Portfolio() {
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               WEATHER APP
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png"
@@ -496,20 +515,20 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-300 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               "I’ve developed a weather app using React with Context API and
               useParams, featuring real-time weather updates and a user-friendly
               interface for displaying weather information based on location."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://react-weather-app-beta-fawn.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -517,7 +536,7 @@ function Portfolio() {
 
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2">
+            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
               TODO APP
               <img
                 src="https://cdn-icons-png.freepik.com/256/8476/8476658.png?semt=ais_hybrid"
@@ -526,20 +545,20 @@ function Portfolio() {
                 className="inline rounded"
               />
             </h3>
-            <p className="text-[#767676] text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
               "I’ve created a to-do app with React and Tailwind CSS that allows
               users to manage tasks efficiently, featuring a clean design and
               intuitive task management.
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6">
+            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
               <a href="" className="flex items-center gap-2 font-semibold">
-                Code <FaGithubSquare className="text-2xl" />
+                <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
                 href="https://react-todo-app-eight-mu.vercel.app/"
                 className="flex items-center gap-2 font-semibold"
               >
-                Live Demo <HiMiniViewfinderCircle className="text-2xl" />
+                <HiMiniViewfinderCircle className="text-2xl" /> Live Demo
               </a>
             </div>
           </div>
@@ -553,15 +572,18 @@ function Portfolio() {
         </div>
       </section>
       {/* Contact Section */}
-      <section className="bg-white py-36 px-4 sm:px-6 lg:px-8" id="contact">
+      <section
+        className="bg-white dark:bg-black py-36 px-4 sm:px-6 lg:px-8"
+        id="contact"
+      >
         <div className="text-center mb-8">
           <h1 className="text-xl font-semibold text-[#147efb]">Contact</h1>
-          <h2 className="text-3xl font-bold mt-2 mb-4">
+          <h2 className="text-3xl font-bold mt-2 mb-4 dark:text-white">
             Don't be shy! Hit me up! 👇
           </h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-          <div className="flex flex-col md:flex-row items-center gap-4 p-4 bg-white rounded-lg shadow-lg w-full max-w-xs md:max-w-md">
+          <div className="flex flex-col md:flex-row items-center gap-4 p-4 dark:bg-gray-600 bg-white rounded-lg shadow-lg w-full max-w-xs md:max-w-md">
             <span className="bg-white rounded-full p-3 shadow-lg text-red-600 flex items-center justify-center">
               <img
                 src="/location.svg"
@@ -571,16 +593,18 @@ function Portfolio() {
             </span>
             <div>
               <h3 className="font-bold text-lg">Location</h3>
-              <p className="text-gray-600">Haryana, Hisar</p>
+              <p className="text-gray-600 dark:text-gray-200">Haryana, Hisar</p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row items-center gap-4 p-4 bg-white rounded-lg shadow-lg w-full max-w-xs md:max-w-md">
+          <div className="flex flex-col md:flex-row items-center gap-4 p-4 dark:bg-gray-600 bg-white rounded-lg shadow-lg w-full max-w-xs md:max-w-md">
             <span className="bg-white rounded-full p-3 shadow-lg flex items-center justify-center">
               <img src="/gmail.svg" alt="gmail-svg" className="w-8 h-8" />
             </span>
             <div className="text-center md:text-left">
               <h3 className="font-bold text-lg">Mail</h3>
-              <p className="text-gray-600">satyammishradeveloper@gmail.com</p>
+              <p className="text-gray-600 dark:text-gray-200">
+                satyammishradeveloper@gmail.com
+              </p>
             </div>
           </div>
         </div>
