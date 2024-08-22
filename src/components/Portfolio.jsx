@@ -300,7 +300,10 @@ function Portfolio() {
               CSS.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/WeatherApp"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
@@ -330,7 +333,10 @@ function Portfolio() {
               multiple levels.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/QuizApp"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
@@ -373,7 +379,10 @@ function Portfolio() {
               real-time updates with a sleek, modern design."
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/digitalClock"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
@@ -403,7 +412,10 @@ function Portfolio() {
               intuitive interface."
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/stopWatch"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
@@ -447,7 +459,10 @@ function Portfolio() {
               typing experiences."
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/vertualKeyboard"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
@@ -477,7 +492,10 @@ function Portfolio() {
               commits, with real-time updates and interactive features."
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/react-search-github-profile"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
@@ -521,7 +539,10 @@ function Portfolio() {
               interface for displaying weather information based on location."
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/react-weather-app"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
@@ -551,7 +572,10 @@ function Portfolio() {
               intuitive task management.
             </p>
             <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
-              <a href="" className="flex items-center gap-2 font-semibold">
+              <a
+                href="https://github.com/satyam1007/react-todo-app"
+                className="flex items-center gap-2 font-semibold"
+              >
                 <FaGithubSquare className="text-2xl" /> Code
               </a>
               <a
