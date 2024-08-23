@@ -48,13 +48,7 @@ function Portfolio() {
     <>
       <div className="bg-white dark:bg-black border-b-2 dark:border-gray-700 fixed top-0 left-0 right-0 z-50">
         <header className="flex justify-between items-center px-6 py-4 md:px-8 md:py-5 dark:text-white text-[#2d2e32]">
-          <div id="logo" className="text-xl font-bold flex items-center gap-2">
-            <img
-              src="/satyam-web-works.webp"
-              alt="web-logo"
-              width={30}
-              className="rounded-full"
-            />
+          <div id="logo" className="text-xl font-bold">
             <a href="#">Satyam.dev</a>
           </div>
           <nav className="hidden md:flex">
