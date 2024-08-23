@@ -6,6 +6,9 @@ body {
   font-family: "Poppins", sans-serif;
   scrollbar-color: #8e8e8e #fff;
   scrollbar-width: thin;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #profile-img {

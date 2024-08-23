@@ -24,38 +24,58 @@ function Portfolio() {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
+  const navLinkStyle = "hover:text-[#147efb] duration-200";
+
+  const skillsIcons =
+    "w-9 h-9 hover:scale-110 transition-transform duration-200";
+
+  const imagesStyles =
+    "w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover";
+
+  const projectDescriptions =
+    "text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed";
+
+  const projectLinkStyles =
+    "flex items-center justify-center md:justify-start gap-6 dark:text-gray-300";
+
+  const projectTitles =
+    "text-xl md:text-2xl font-bold flex items-center gap-2 dark:text-white";
+
+  const projectStructures =
+    "flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6";
+
   return (
     <>
       <div className="bg-white dark:bg-black border-b-2 dark:border-gray-700 fixed top-0 left-0 right-0 z-50">
         <header className="flex justify-between items-center px-6 py-4 md:px-8 md:py-5 dark:text-white text-[#2d2e32]">
-          <div id="logo" className="text-xl font-bold">
+          <div id="logo" className="text-xl font-bold flex items-center gap-2">
+            <img
+              src="/satyam-web-works.webp"
+              alt="web-logo"
+              width={30}
+              className="rounded-full"
+            />
             <a href="#">Satyam.dev</a>
           </div>
           <nav className="hidden md:flex">
             <ul className="flex items-center space-x-6 md:space-x-8 text-md font-semibold">
               <li className="cursor-pointer">
-                <a href="#home" className="hover:text-[#147efb] duration-200">
+                <a href="#home" className={navLinkStyle}>
                   Home
                 </a>
               </li>
               <li className="cursor-pointer">
-                <a href="#about" className="hover:text-[#147efb] duration-200">
+                <a href="#about" className={navLinkStyle}>
                   About
                 </a>
               </li>
               <li className="cursor-pointer">
-                <a
-                  href="#projects"
-                  className="hover:text-[#147efb] duration-200"
-                >
+                <a href="#projects" className={navLinkStyle}>
                   Projects
                 </a>
               </li>
               <li className="cursor-pointer">
-                <a
-                  href="#contact"
-                  className="hover:text-[#147efb] duration-200"
-                >
+                <a href="#contact" className={navLinkStyle}>
                   Contact
                 </a>
               </li>
@@ -95,22 +115,22 @@ function Portfolio() {
           </div>
           <ul className="flex items-center flex-col space-y-10 text-2xl font-medium mt-32">
             <li className="cursor-pointer">
-              <a href="#home" className="hover:text-[#147efb] duration-200">
+              <a href="#home" className={navLinkStyle}>
                 Home
               </a>
             </li>
             <li className="cursor-pointer">
-              <a href="#about" className="hover:text-[#147efb] duration-200">
+              <a href="#about" className={navLinkStyle}>
                 About
               </a>
             </li>
             <li className="cursor-pointer">
-              <a href="#projects" className="hover:text-[#147efb] duration-200">
+              <a href="#projects" className={navLinkStyle}>
                 Projects
               </a>
             </li>
             <li className="cursor-pointer">
-              <a href="#contact" className="hover:text-[#147efb] duration-200">
+              <a href="#contact" className={navLinkStyle}>
                 Contact
               </a>
             </li>
@@ -166,53 +186,41 @@ function Portfolio() {
             </p>
             <ul className="flex justify-center items-center space-x-4 md:pl-8">
               <li>
-                <img
-                  src="/html-logo.svg"
-                  alt="HTML"
-                  className="w-9 h-9 hover:scale-110 transition-transform duration-200"
-                />
+                <img src="/html-logo.svg" alt="HTML" className={skillsIcons} />
               </li>
               <li>
-                <img
-                  src="/css-logo.svg"
-                  alt="CSS"
-                  className="w-9 h-9 hover:scale-110 transition-transform duration-200"
-                />
+                <img src="/css-logo.svg" alt="CSS" className={skillsIcons} />
               </li>
               <li>
                 <img
                   src="/javascript-logo.svg"
                   alt="JavaScript"
-                  className="w-9 h-9 hover:scale-110 transition-transform duration-200"
+                  className={skillsIcons}
                 />
               </li>
               <li>
                 <img
                   src="/typescript-logo.svg"
                   alt="TypeScript"
-                  className="w-9 h-9 hover:scale-110 transition-transform duration-200"
+                  className={skillsIcons}
                 />
               </li>
               <li>
                 <img
                   src="/react-logo.svg"
                   alt="React"
-                  className="w-9 h-9 hover:scale-110 transition-transform duration-200"
+                  className={skillsIcons}
                 />
               </li>
               <li>
                 <img
                   src="/tailwind.svg"
                   alt="Tailwind CSS"
-                  className="w-9 h-9 hover:scale-110 transition-transform duration-200"
+                  className={skillsIcons}
                 />
               </li>
               <li>
-                <img
-                  src="/sql.svg"
-                  alt="SQL"
-                  className="w-9 h-9 hover:scale-110 transition-transform duration-200"
-                />
+                <img src="/sql.svg" alt="SQL" className={skillsIcons} />
               </li>
             </ul>
           </div>
@@ -228,7 +236,7 @@ function Portfolio() {
             <img
               src="https://www.stefantopalovic.com/static/media/about-img.62b47e7f183d4b4e9feb.webp"
               alt="mee"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
             <span className="hidden md:block absolute bottom-0 right-0 transform translate-x-[30%] translate-y-[30%] bg-white rounded-full">
               <img
@@ -245,7 +253,7 @@ function Portfolio() {
             </span>
           </div>
           <div className="text-center md:text-left pt-8">
-            <h1 className="text-sm md:text-[16px] font-bold text-[#147efb]">
+            <h1 className="text-md md:text-lg font-bold text-[#147efb]">
               ABOUT ME
             </h1>
             <h2 className="text-xl sm:text-2xl dark:text-white text-[#2d2e32] font-bold tracking-wide leading-snug mt-2">
@@ -253,11 +261,11 @@ function Portfolio() {
             </h2>
             <div className="text-[#767676] dark:text-gray-400">
               <p className="mt-4 text-[14px] sm:text-[15px]">
-                Hey, my name is Stefan, and I'm a Frontend Developer. My passion
-                is to create and develop a clean UI/UX for my users.
+                Hey, my name is Satyam Mishra, and I'm a Frontend Developer. My
+                passion is to create and develop a clean UI/UX for my users.
               </p>
               <p className="mt-6 text-[14px] sm:text-[15px]">
-                My main stack currently is React/Next.js in combination with
+                My main stack currently is React/Javascript in combination with
                 Tailwind CSS and TypeScript.
               </p>
             </div>
@@ -270,22 +278,24 @@ function Portfolio() {
         id="projects"
       >
         <div className="py-10 text-center">
-          <h1 className="text-lg font-semibold text-[#147efb]">PORTFOLIO</h1>
+          <h1 className="text-md md:text-lg font-bold text-[#147efb]">
+            PORTFOLIO
+          </h1>
           <h2 className="text-xl font-bold py-2 dark:text-white">
             Each project is a unique piece of development 🧩
           </h2>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="relative flex-shrink-0">
             <img
               src="/weather-app.png"
               alt="weather-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               WEATHER APP{" "}
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png"
@@ -294,12 +304,12 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className={projectDescriptions}>
               Discover weather conditions in real-time with this visually
               stunning Weather App, crafted with React.js, Vite, and Tailwind
               CSS.
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/WeatherApp"
                 className="flex items-center gap-2 font-semibold"
@@ -316,9 +326,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               QUIZ APP
               <img
                 src="https://cdn-icons-png.flaticon.com/512/2641/2641457.png"
@@ -327,12 +337,12 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className={projectDescriptions}>
               I've built a quiz app with React props and Tailwind CSS, featuring
               a responsive design and interactive coding questions across
               multiple levels.
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/QuizApp"
                 className="flex items-center gap-2 font-semibold"
@@ -348,24 +358,20 @@ function Portfolio() {
             </div>
           </div>
           <div className="relative flex-shrink-0">
-            <img
-              src="/quiz-app.png"
-              alt="quiz-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
-            />
+            <img src="/quiz-app.png" alt="quiz-img" className={imagesStyles} />
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="relative flex-shrink-0">
             <img
               src="/digital-clock.png"
               alt="digital-clock-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               DIGITAL CLOCK{" "}
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1404/1404164.png"
@@ -374,11 +380,11 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className={projectDescriptions}>
               "I’ve built a digital clock with React and Tailwind CSS that shows
               real-time updates with a sleek, modern design."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/digitalClock"
                 className="flex items-center gap-2 font-semibold"
@@ -395,9 +401,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               STOPWATCH
               <img
                 src="https://cdn-icons-png.flaticon.com/512/8671/8671450.png"
@@ -406,12 +412,12 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className={projectDescriptions}>
               "I've developed a stopwatch using React and Tailwind CSS,
               featuring start, stop, and reset functionalities with a clean and
               intuitive interface."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/stopWatch"
                 className="flex items-center gap-2 font-semibold"
@@ -430,21 +436,21 @@ function Portfolio() {
             <img
               src="/stopwatch.png"
               alt="stopwatch-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="relative flex-shrink-0">
             <img
               src="/vertual-keyboard.png"
               alt="vertual-keyboard-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               VERTAUL KEYBOARD
               <img
                 src="https://cdn2.iconfinder.com/data/icons/metro-uinvert-dock/256/On_Screen_Keyboard.png"
@@ -453,12 +459,12 @@ function Portfolio() {
                 className="inline"
               />
             </h3>
-            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className={projectDescriptions}>
               "I’ve created a virtual keyboard with React and Tailwind CSS,
               offering a fully interactive and responsive design for enhanced
               typing experiences."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/vertualKeyboard"
                 className="flex items-center gap-2 font-semibold"
@@ -475,9 +481,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               GITHUB
               <img
                 src="https://repository-images.githubusercontent.com/289382429/e9c6ec80-8902-11eb-9f55-5de819da8bf5"
@@ -486,12 +492,12 @@ function Portfolio() {
                 className="inline rounded"
               />
             </h3>
-            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className={projectDescriptions}>
               "I’ve built a GitHub clone using React and Tailwind CSS, providing
               a user-friendly interface for browsing repositories, profiles, and
               commits, with real-time updates and interactive features."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/react-search-github-profile"
                 className="flex items-center gap-2 font-semibold"
@@ -510,21 +516,21 @@ function Portfolio() {
             <img
               src="/github-clone.png"
               alt="github-clone-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="relative flex-shrink-0">
             <img
               src="/weather-app-2.png"
               alt="weather-app-2-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
           </div>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               WEATHER APP
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1779/1779940.png"
@@ -538,7 +544,7 @@ function Portfolio() {
               useParams, featuring real-time weather updates and a user-friendly
               interface for displaying weather information based on location."
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/react-weather-app"
                 className="flex items-center gap-2 font-semibold"
@@ -555,9 +561,9 @@ function Portfolio() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-6">
-            <h3 className="text-sm md:text-[20px] font-bold flex items-center gap-2 dark:text-white">
+            <h3 className={projectTitles}>
               TODO APP
               <img
                 src="https://cdn-icons-png.freepik.com/256/8476/8476658.png?semt=ais_hybrid"
@@ -566,12 +572,12 @@ function Portfolio() {
                 className="inline rounded"
               />
             </h3>
-            <p className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium leading-relaxed">
+            <p className={projectDescriptions}>
               "I’ve created a to-do app with React and Tailwind CSS that allows
               users to manage tasks efficiently, featuring a clean design and
               intuitive task management.
             </p>
-            <div className="flex items-center justify-center md:justify-start gap-6 dark:text-gray-300">
+            <div className={projectLinkStyles}>
               <a
                 href="https://github.com/satyam1007/react-todo-app"
                 className="flex items-center gap-2 font-semibold"
@@ -590,7 +596,7 @@ function Portfolio() {
             <img
               src="/todo-app.png"
               alt="todo-app-img"
-              className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[420px] lg:h-[300px] rounded-md object-cover"
+              className={imagesStyles}
             />
           </div>
         </div>
@@ -615,7 +621,7 @@ function Portfolio() {
                 className="w-8 h-8"
               />
             </span>
-            <div>
+            <div className="text-center md:text-left">
               <h3 className="font-bold text-lg">Location</h3>
               <p className="text-gray-600 dark:text-gray-200">Haryana, Hisar</p>
             </div>
