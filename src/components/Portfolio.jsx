@@ -627,7 +627,12 @@ function Portfolio() {
             <div className="text-center md:text-left">
               <h3 className="font-bold text-lg">Mail</h3>
               <p className="text-gray-600 dark:text-gray-200">
-                satyammishradeveloper@gmail.com
+                <a
+                  href="mailto:satyammishradeveloper@gmail.com"
+                  className="hover:underline text-gray-600 dark:text-gray-200"
+                >
+                  satyammishradeveloper@gmail.com
+                </a>
               </p>
             </div>
           </div>
