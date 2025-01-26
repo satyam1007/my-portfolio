@@ -6,7 +6,6 @@ import { FaBarsStaggered } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
 import { HiMiniViewfinderCircle } from "react-icons/hi2";
 
 function Portfolio() {
@@ -157,12 +156,6 @@ function Portfolio() {
                   className="text-3xl dark:text-gray-400 text-gray-700 hover:text-black hover:scale-110 duration-200"
                 >
                   <FaGithubSquare />
-                </a>
-                <a
-                  href="https://www.instagram.com/satyam07.dev/"
-                  className="text-3xl bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] hover:scale-110 duration-200"
-                >
-                  <FaSquareInstagram />
                 </a>
                 <a
                   href="#"
