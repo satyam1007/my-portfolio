@@ -49,7 +49,7 @@ function Portfolio() {
       <div className="bg-white dark:bg-black border-b-2 dark:border-gray-700 fixed top-0 left-0 right-0 z-50">
         <header className="flex justify-between items-center px-6 py-4 md:px-8 md:py-5 dark:text-white text-[#2d2e32]">
           <div id="logo" className="text-xl font-bold">
-            <a href="#">Satyam.dev</a>
+            <a href="/">Satyam.dev</a>
           </div>
           <nav className="hidden md:flex">
             <ul className="flex items-center space-x-6 md:space-x-8 text-md font-semibold">
@@ -153,15 +153,34 @@ function Portfolio() {
                 <a
                   href="https://github.com/satyam1007"
                   target="_blank"
-                  className="text-3xl dark:text-gray-400 text-gray-700 hover:text-black hover:scale-110 duration-200"
+                  className="dark:text-gray-400 text-gray-700 hover:text-black hover:scale-110 duration-200"
                 >
-                  <FaGithubSquare />
+                  <img
+                    src="/public/github.png"
+                    alt="github-icon"
+                    className="w-8 h-8"
+                  />
+                </a>
+                <a
+                  href="https://www.instagram.com/satyam07.dev/"
+                  target="_blank"
+                  className="text-red-600 hover:text-red-800 hover:scale-110 duration-200"
+                >
+                  <img
+                    src="/public/instagram.png"
+                    alt="instagram-icon"
+                    className="w-8 h-8"
+                  />
                 </a>
                 <a
                   href="#"
-                  className="text-3xl text-blue-600 hover:text-blue-800 hover:scale-110 duration-200"
+                  className="text-blue-600 hover:text-blue-800 hover:scale-110 duration-200"
                 >
-                  <FaLinkedin />
+                  <img
+                    src="/public/linkedin.png"
+                    alt="linkedin-icon"
+                    className="w-8 h-8"
+                  />
                 </a>
               </div>
             </div>
