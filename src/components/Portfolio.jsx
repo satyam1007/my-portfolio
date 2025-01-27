@@ -5,6 +5,7 @@ import { FaSun } from "react-icons/fa";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { FaTimes } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
+import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { HiMiniViewfinderCircle } from "react-icons/hi2";
 
@@ -153,7 +154,8 @@ function Portfolio() {
                 <a
                   href="https://github.com/satyam1007"
                   target="_blank"
-                  className="dark:text-gray-400 text-gray-700 hover:text-black hover:scale-110 duration-200"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 duration-200"
                 >
                   <img
                     src="/github.png"
@@ -164,7 +166,8 @@ function Portfolio() {
                 <a
                   href="https://www.instagram.com/satyam07.dev/"
                   target="_blank"
-                  className="text-red-600 hover:text-red-800 hover:scale-110 duration-200"
+                  rel="noopener noreferrer"
+                  className="hover:scale-110 duration-200"
                 >
                   <img
                     src="/instagram.png"
@@ -172,10 +175,7 @@ function Portfolio() {
                     className="w-8 h-8"
                   />
                 </a>
-                <a
-                  href="#"
-                  className="text-blue-600 hover:text-blue-800 hover:scale-110 duration-200"
-                >
+                <a href="#" className="hover:scale-110 duration-200">
                   <img
                     src="/linkedin.png"
                     alt="linkedin-icon"
@@ -251,7 +251,7 @@ function Portfolio() {
               alt="mee"
               className={imagesStyles}
             />
-            <span className="hidden md:block absolute bottom-0 right-0 transform translate-x-[30%] translate-y-[30%] bg-white rounded-full">
+            <span className="absolute bottom-0 right-0 transform translate-x-[30%] translate-y-[30%] bg-white rounded-full">
               <img
                 src="https://www.stefantopalovic.com/static/media/text2.3d5aa6ba2d0632bb4e0572631c3f9dc2.svg"
                 alt="text"
@@ -673,7 +673,16 @@ function Portfolio() {
               <FaGithubSquare />
             </a>
             <a
+              href="https://www.instagram.com/satyam07.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-gray-100 hover:scale-110 duration-200"
+            >
+              <FaInstagramSquare />
+            </a>
+            <a
               href="#"
+              rel="noopener noreferrer"
               className="text-3xl text-blue-100 hover:scale-110 duration-200"
             >
               <FaLinkedin />
