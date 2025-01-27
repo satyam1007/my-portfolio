@@ -156,7 +156,7 @@ function Portfolio() {
                   className="dark:text-gray-400 text-gray-700 hover:text-black hover:scale-110 duration-200"
                 >
                   <img
-                    src="/public/github.png"
+                    src="/github.png"
                     alt="github-icon"
                     className="w-8 h-8"
                   />
@@ -167,7 +167,7 @@ function Portfolio() {
                   className="text-red-600 hover:text-red-800 hover:scale-110 duration-200"
                 >
                   <img
-                    src="/public/instagram.png"
+                    src="/instagram.png"
                     alt="instagram-icon"
                     className="w-8 h-8"
                   />
@@ -177,7 +177,7 @@ function Portfolio() {
                   className="text-blue-600 hover:text-blue-800 hover:scale-110 duration-200"
                 >
                   <img
-                    src="/public/linkedin.png"
+                    src="/linkedin.png"
                     alt="linkedin-icon"
                     className="w-8 h-8"
                   />
