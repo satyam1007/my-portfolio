@@ -251,7 +251,7 @@ function Portfolio() {
               alt="mee"
               className={imagesStyles}
             />
-            <span className="absolute bottom-0 right-0 transform translate-x-[30%] translate-y-[30%] bg-white rounded-full">
+            <span className="hidden sm:hidden md:block lg:block absolute bottom-0 right-0 transform translate-x-[30%] translate-y-[30%] bg-white rounded-full">
               <img
                 src="https://www.stefantopalovic.com/static/media/text2.3d5aa6ba2d0632bb4e0572631c3f9dc2.svg"
                 alt="text"
