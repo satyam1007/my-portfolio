@@ -241,46 +241,42 @@ function Portfolio() {
       </section>
       {/* About Section */}
       <section
-        className="px-4 dark:bg-black bg-white sm:px-8 md:px-16 lg:px-32 lg:pt-16 lg:pb-28 dark:border-b-2 border-gray-700"
+        className="dark:bg-black bg-white lg:px-32 px-4 lg:py-16 py-8 dark:border-b-2 border-gray-700"
         id="about"
       >
-        <div className="relative flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-10 lg:space-x-20 p-4 sm:p-6">
+        <div className={projectStructures}>
           <div className="relative flex-shrink-0">
             <img
-              src="https://www.stefantopalovic.com/static/media/about-img.62b47e7f183d4b4e9feb.webp"
+              src="https://cdn.prod.website-files.com/5e4c6b4b7ed0a2e77458ce3d/638a92cf349604581a35fe75_263a75529a1752b75d64f9f21fd07c92-3-2.jpeg"
               alt="mee"
               className={imagesStyles}
             />
-            <span className="hidden sm:hidden md:block lg:block absolute bottom-0 right-0 transform translate-x-[30%] translate-y-[30%] bg-white rounded-full">
-              <img
-                src="https://www.stefantopalovic.com/static/media/text2.3d5aa6ba2d0632bb4e0572631c3f9dc2.svg"
-                alt="text"
-                className="w-24 sm:w-28 md:w-32 lg:w-48 h-auto relative"
-                id="dev-img-rotate"
-              />
-              <img
-                src="https://www.stefantopalovic.com/static/media/working-emoji.c5325f52b5be329995a5.png"
-                alt="work-emoji"
-                className="absolute top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] w-10 sm:w-12 md:w-14 lg:w-16 h-10 sm:h-12 md:h-14 lg:h-16"
-              />
-            </span>
           </div>
-          <div className="text-center md:text-left pt-8">
-            <h1 className="text-md md:text-lg font-bold text-[#147efb]">
-              ABOUT ME
-            </h1>
-            <h2 className="text-xl sm:text-2xl dark:text-white text-[#2d2e32] font-bold tracking-wide leading-snug mt-2">
+          <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-3">
+            <h3 className="text-xl md:text-2xl font-bold flex items-center text-[#147efb]">
+              ABOUT ME <span className="md:text-4xl text-2xl ml-2">😎</span>
+            </h3>
+
+            <h2 className="text-xl sm:text-xl dark:text-white text-[#2d2e32] font-bold tracking-wide">
               Front-end Developer based <br /> in India, Hisar 📍
             </h2>
-            <div className="text-[#767676] dark:text-gray-400">
-              <p className="mt-4 text-[14px] sm:text-[15px]">
-                Hey, my name is Satyam Mishra, and I'm a Frontend Developer. My
-                passion is to create and develop a clean UI/UX for my users.
-              </p>
-              <p className="mt-6 text-[14px] sm:text-[15px]">
-                My main stack currently is React/Javascript in combination with
-                Tailwind CSS and TypeScript.
-              </p>
+            <div className="text-[#767676] dark:text-gray-400 text-[14px] sm:text-[17px] font-medium">
+              <div className="text-[#767676] dark:text-gray-400">
+                <p className="text-[14px] sm:text-[15px]">
+                  Hey, my name is{" "}
+                  <span className="font-semibold">Satyam Mishra</span>, and I'm
+                  a <span className="font-semibold">Frontend Developer</span>.
+                  My passion is to create and develop a clean UI/UX for my
+                  users.
+                </p>
+                <p className="mt-4 text-[14px] sm:text-[15px]">
+                  My main stack currently is{" "}
+                  <span className="font-semibold">React/Javascript</span> in
+                  combination with{" "}
+                  <span className="font-semibold">Tailwind CSS</span> and{" "}
+                  <span className="font-semibold">TypeScript</span>.
+                </p>
+              </div>
             </div>
           </div>
         </div>
