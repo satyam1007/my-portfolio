@@ -7,6 +7,7 @@ import { FaTimes } from "react-icons/fa";
 import { FaGithubSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaSquareTwitter } from "react-icons/fa6";
 import { HiMiniViewfinderCircle } from "react-icons/hi2";
 
 function Portfolio() {
@@ -175,10 +176,25 @@ function Portfolio() {
                     className="w-8 h-8"
                   />
                 </a>
-                <a href="#" className="hover:scale-110 duration-200">
+                <a
+                  href="https://www.linkedin.com/in/satyam-mishra-202681368/"
+                  target="_blank"
+                  className="hover:scale-110 duration-200"
+                >
                   <img
                     src="/linkedin.png"
                     alt="linkedin-icon"
+                    className="w-8 h-8"
+                  />
+                </a>
+                <a
+                  href="https://x.com/mishra07_dev"
+                  target="_blank"
+                  className="hover:scale-110 duration-200"
+                >
+                  <img
+                    src="/twitter.jpg"
+                    alt="twitter-icon"
                     className="w-8 h-8"
                   />
                 </a>
@@ -677,11 +693,20 @@ function Portfolio() {
               <FaInstagramSquare />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/satyam-mishra-202681368/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-3xl text-blue-100 hover:scale-110 duration-200"
             >
               <FaLinkedin />
+            </a>
+            <a
+              href="https://x.com/mishra07_dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-3xl text-blue-100 hover:scale-110 duration-200"
+            >
+              <FaSquareTwitter />
             </a>
           </div>
         </div>
