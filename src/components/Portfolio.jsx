@@ -193,7 +193,7 @@ function Portfolio() {
                   className="hover:scale-110 duration-200"
                 >
                   <img
-                    src="/twitter.jpg"
+                    src="/twitter.png"
                     alt="twitter-icon"
                     className="w-8 h-8"
                   />
