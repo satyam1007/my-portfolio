@@ -144,8 +144,10 @@ const App = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="bg-primary/10 p-2 rounded-lg mr-2">👋</span>
-            <span>Satyam</span>
+            <span className="bg-primary/10 p-2 rounded-lg mr-2">
+              <img src="/portIcon.png" alt="" width={35} height={35} />
+            </span>
+            <span>Mishra</span>
           </motion.a>
 
           {/* Desktop Navigation */}
@@ -539,7 +541,7 @@ const App = () => {
                       {
                         icon: <FiMail size={18} />,
                         label: "Email",
-                        value: "satyammishradeveloper@gmail.com",
+                        value: "dummy@gmail.com",
                       },
                       {
                         icon: <FiMapPin size={18} />,
@@ -1021,7 +1023,7 @@ const App = () => {
                       {
                         icon: <FiMail className="text-xl" />,
                         title: "Email",
-                        value: "satyammishradeveloper@gmail.com",
+                        value: "dummy@gmail.com",
                         link: "mailto:satyammishradeveloper@gmail.com",
                       },
                       {
