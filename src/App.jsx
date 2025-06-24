@@ -631,17 +631,17 @@ const App = () => {
                   },
                   {
                     name: "JavaScript",
-                    level: 80,
+                    level: 60,
                     icon: <SiJavascript className="text-yellow-400" />,
                   },
                   {
                     name: "React",
-                    level: 75,
+                    level: 55,
                     icon: <SiReact className="text-blue-400" />,
                   },
                   {
                     name: "Tailwind CSS",
-                    level: 90,
+                    level: 85,
                     icon: <SiTailwindcss className="text-cyan-400" />,
                   },
                   {
@@ -651,12 +651,12 @@ const App = () => {
                   },
                   {
                     name: "Git",
-                    level: 85,
+                    level: 75,
                     icon: <SiGit className="text-orange-600" />,
                   },
                   {
                     name: "TypeScript",
-                    level: 65,
+                    level: 60,
                     icon: <SiTypescript className="text-blue-600" />,
                   },
                 ].map((skill, index) => (
