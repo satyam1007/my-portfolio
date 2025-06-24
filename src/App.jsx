@@ -917,7 +917,7 @@ const App = () => {
                           />
                         </a>
                         <span className="text-xs text-slate-400">
-                          {index % 2 === 0 ? "Featured" : "Latest"}
+                          Mobile Friendly
                         </span>
                       </div>
                     </div>
