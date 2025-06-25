@@ -630,7 +630,7 @@ const App = () => {
                     icon: <SiCss3 className="text-blue-500" />,
                   },
                   {
-                    name: "JavaScript",
+                    name: "JS",
                     level: 60,
                     icon: <SiJavascript className="text-yellow-400" />,
                   },
@@ -655,7 +655,7 @@ const App = () => {
                     icon: <SiGit className="text-orange-600" />,
                   },
                   {
-                    name: "TypeScript",
+                    name: "TS",
                     level: 60,
                     icon: <SiTypescript className="text-blue-600" />,
                   },
