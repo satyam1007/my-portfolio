@@ -387,7 +387,7 @@ const App = () => {
                   >
                     <span className="text-primary font-medium flex items-center gap-2">
                       <FiAward className="text-yellow-500" />
-                      <span>3+ Years Experience</span>
+                      <span>2+ Years Experience</span>
                     </span>
                   </motion.div>
                 </div>
@@ -466,7 +466,7 @@ const App = () => {
                           <FiAward className="text-primary text-xl" />
                         </div>
                         <div>
-                          <p className="font-bold text-slate-800">3+ Years</p>
+                          <p className="font-bold text-slate-800">2+ Years</p>
                           <p className="text-sm text-slate-600">Experience</p>
                         </div>
                       </div>
@@ -541,7 +541,7 @@ const App = () => {
                       {
                         icon: <FiMail size={18} />,
                         label: "Email",
-                        value: "dummy@gmail.com",
+                        value: "satyammishradeveloper@gmail.com",
                       },
                       {
                         icon: <FiMapPin size={18} />,
@@ -551,7 +551,7 @@ const App = () => {
                       {
                         icon: <FiBriefcase size={18} />,
                         label: "Experience",
-                        value: "3+ Years",
+                        value: "2+ Years",
                       },
                     ].map((item, index) => (
                       <motion.div
@@ -562,9 +562,11 @@ const App = () => {
                         <div className="p-2 bg-primary/10 text-primary rounded-lg">
                           {item.icon}
                         </div>
-                        <div>
+                        <div className="min-w-0">
+                          {" "}
+                          {/* Add this to allow shrinking and wrapping */}
                           <p className="text-sm text-slate-500">{item.label}</p>
-                          <p className="font-medium text-slate-800">
+                          <p className="font-medium text-slate-800 break-words truncate">
                             {item.value}
                           </p>
                         </div>
@@ -1023,7 +1025,7 @@ const App = () => {
                       {
                         icon: <FiMail className="text-xl" />,
                         title: "Email",
-                        value: "dummy@gmail.com",
+                        value: "satyammishradeveloper@gmail.com",
                         link: "mailto:satyammishradeveloper@gmail.com",
                       },
                       {
